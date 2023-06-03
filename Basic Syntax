@@ -62,3 +62,38 @@ public class Main
 	     
 	}
 }
+
+
+*******************************************
+//L002
+
+//do while loop
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+// 		 Scanner scan = new Scanner(System.in);
+        int i = 15;
+        do {
+            System.out.println("hello");
+            i++;
+        } while(i<=5);
+        
+        
+	}
+}
+
+//print even number till n
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scn = new Scanner(System.in);
+		 int n = scn.nextInt();
+		 for(int sp = 0; sp<=n; sp+=2){
+		     System.out.print(sp+" ");
+		 }
+		 
+	}
+}
+
