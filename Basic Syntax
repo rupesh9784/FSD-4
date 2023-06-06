@@ -97,3 +97,46 @@ public class Main
 	}
 }
 
+
+
+********************************************
+//L003
+
+// check number is prime or not
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. */
+        Scanner scn = new Scanner(System.in);
+        int t = scn.nextInt();
+        for(int i = 1; i<=t; i++){
+            int num = scn.nextInt();
+            int check = 0;
+            if(num == 1) {
+                check = 1;
+                System.out.println("Not prime");
+            }
+            for(int div = 2; div*div<=num; div++){
+                if(num % div == 0){
+                    check = 1;
+                    System.out.println("Not prime");
+                    break;
+                }
+                
+            }
+            if(check == 0){
+                System.out.println("Prime");
+            }
+            
+            
+        }
+    }
+}
+
+
