@@ -1,0 +1,38 @@
+//L001
+
+//p1
+class Solution {
+
+    void printSquare(int n) {
+        // code here
+        for(int row = 1; row<=n; row++){
+            
+            for(int j = 1; j<=n; j++){
+                System.out.print("* ");
+            }
+            
+            //next line
+            System.out.println();
+        }
+        
+    }
+}
+
+//p2
+class Solution {
+
+    void printTriangle(int n) {
+        // code here
+        int nst = 1;
+        for(int i = 1; i<=n; i++){
+            //star
+            for(int j = 1; j<=nst; j++){
+                System.out.print("* ");
+            }
+            
+            //next line
+            System.out.println();
+            nst = nst+1;
+        }
+    }
+}
