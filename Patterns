@@ -57,7 +57,8 @@ class Solution {
        }
     }
 }
-
+*********************************
+//L002
 //p4
 class Solution {
 
@@ -99,6 +100,37 @@ public static void staircase(int n) {
        }
     }
     
+    //p5
+     void printTriangle(int n) {
+        // code here
+        int nst = n;
+        for(int i =1; i<=n; i++){
+            
+            for(int j =1; j<=nst; j++){
+                System.out.print("* ");
+            }
+            
+            //next line
+            System.out.println();
+            nst--;
+        }
+    }
+    
+    //p6
+     void printTriangle(int n) {
+        int nst = n;
+        for(int i =1; i<=n; i++){
+            int val = 1;
+            for(int j =1; j<=nst; j++){
+                System.out.print(val+" ");
+                val++;
+            }
+            
+            //next line
+            System.out.println();
+            nst--;
+        }
+    }
     //p7
     class Solution {
 
@@ -147,3 +179,77 @@ class Solution {
         }
     }
 }
+****************************************************
+//L003
+//p9
+class Solution {
+
+    void printDiamond(int n) {
+        // Your code here
+        int nsp = n-1, nst = 1;
+        for(int i =1; i<=2*n; i++){
+            //space
+            for(int j = 1; j<=nsp; j++){
+                System.out.print(" ");
+            }
+            //star
+            for(int j = 1; j<=nst; j++){
+                System.out.print("* ");
+            }
+            //next line
+            System.out.println();
+            if(i<n){
+                nsp--;
+                nst++;
+            }
+            if(i>n){
+                nsp++;
+                nst--;
+            }
+            
+        }
+        
+    }
+}
+
+//p10
+class Solution {
+
+    void printTriangle(int n) {
+        int nst = 1;
+        for(int i =1; i<=2*n-1; i++){
+            for(int j =1; j<=nst; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+            if(i<n) nst++;
+            else nst--;
+        }
+    }
+}
+
+//p11
+class Solution {
+
+    void printTriangle(int n) {
+        // code here
+       
+        int sp =1;
+        for(int i =1; i<=n; i++){
+            int val = sp;
+            for(int j = 1; j<=i; j++){
+                System.out.print(val+" ");
+                if(val==1) val = 0;
+                else val = 1;
+            }
+            //next line
+            System.out.println();
+            if(sp == 1) sp = 0;
+            else sp = 1;
+        }
+    }
+}
+
+******************************************************
+//L004
+
