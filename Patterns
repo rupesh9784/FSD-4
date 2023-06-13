@@ -36,3 +36,114 @@ class Solution {
         }
     }
 }
+
+//p3
+class Solution {
+
+    void printTriangle(int n) {
+        // code here
+       int nst = 1;
+       for(int i=1; i<=n; i++){
+           int val = 1;
+           for(int j =1; j<=nst; j++){
+               System.out.print(val+" ");
+               val++;
+           }
+           
+           //next line
+           System.out.println();
+           nst = nst+1;  // nst += 1;
+           
+       }
+    }
+}
+
+//p4
+class Solution {
+
+    void printTriangle(int n) {
+        // code here
+        int nst = 1;
+        int val =1;
+        for(int i = 1; i<=n; i++){
+            for(int j =1; j<=nst; j++){
+                System.out.print(val+" ");
+            }
+            //nextLine
+            System.out.println();
+            nst++;
+            val++;
+        }
+    }
+}
+
+//staircase
+public static void staircase(int n) {
+    // Write your code here
+       int nsp = n-1 , nst  =1;
+       for(int i = 1; i<=n; i++){
+           //space
+           for(int j =1; j<=nsp; j++){
+               System.out.print(" ");
+           }
+           
+           //star
+           for(int j =1; j<=nst; j++){
+               System.out.print("#");
+           }
+           //next line
+           System.out.println();
+           nsp--;
+           nst++;
+           
+       }
+    }
+    
+    //p7
+    class Solution {
+
+    void printTriangle(int n) {
+        int nsp = n-1, nst = 1;
+        
+        //row
+        for(int i =1; i<=n; i++){
+            //space
+            for(int j = 1; j<=nsp; j++){
+                System.out.print(" ");
+            }
+            //star
+            for(int j = 1; j<=nst; j++){
+                System.out.print("*");
+            }
+            //next line
+            System.out.println();
+            nsp--;
+            nst+=2;
+            
+        }
+    }
+}
+
+//p8
+
+class Solution {
+
+    void printTriangle(int n) {
+        // code here
+        int nsp  =0, nst = 2*n-1;
+        for(int i =1; i<=n; i++){
+           //space
+         for(int j =1; j<=nsp; j++){
+             System.out.print(" ");
+         }
+         //star
+         for(int j =1; j<=nst; j++){
+             System.out.print("*");
+         }
+         //next line
+         System.out.println();
+         nsp++;
+         nst = nst -2;
+        }
+    }
+}
