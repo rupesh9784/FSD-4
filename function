@@ -1,0 +1,57 @@
+//L001
+
+//void function
+import java.util.Scanner;
+public class Func {
+   	 public static void sum(int x,int y,int z,String s){
+         x = 10;
+         y = 20;
+         z = 30;
+	     int ans = x+y+z;
+        System.out.println(ans+s);
+        
+    }
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+             int x = scn.nextInt();
+             int y = scn.nextInt();
+             int z = scn.nextInt();
+           System.out.println( x+y+z +" message1");
+           String s2 = "hello";
+           sum(x,y,z,s2);
+           System.out.println(x+y+z+" message3");
+  
+    }
+}
+
+//return_type function
+public class Funret {
+
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
+       int ans1 = sub(a,b);  
+       int ans2 = mul(a,b); 
+       int ans3 = div(a,b);
+       int ans4 = sum(a,b);
+        System.out.println(ans1);  //10
+        System.out.println(ans2);  //200
+        System.out.println(ans3);  //0
+        System.out.println(ans4);  //30
+    }
+   public static int sum(int a, int b){
+      return a+b;
+   }
+   public static int mul(int a, int b){
+      return a*b;
+   }
+   public static int sub(int a, int b){
+      return b-a;
+   }
+   public static int div(int a, int b){
+      return a/b;
+   }
+
+}
+
+//********************************************************
