@@ -55,3 +55,60 @@ public class Funret {
 }
 
 //********************************************************
+/L002
+
+import java.util.Scanner;
+public class fun1 {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int d = scn.nextInt();
+        // int nod = countDigit(n);
+        int ans =getFrequency(n,d);
+        System.out.println(ans);
+    }
+
+// find count of a digit
+    public static int countDigit(int n){
+       int c =0;
+       while(n>0){
+        c++;
+        n = n/10;
+       }
+       return c;
+    }
+// find frequency of a digit
+    public static int getFrequency(int n, int d){
+        int c = 0;
+        while(n != 0){
+            int rem = n%10;
+            if(rem==d){
+                c++;
+            }
+            n= n/10;
+        }
+        return c;
+
+    }
+}
+
+//dectimal to binary
+public class DecToBin {
+    public static void main(String[] args) {
+        int n = 25;
+        int ans = decimalToBinary(n);
+        System.out.println(ans);
+    }
+    public static int decimalToBinary(int n){
+      int bin = 0;
+      int m = 1;
+      while(n != 0){
+        int rem = n%2;
+        bin = bin + rem*m;
+        m= m*10;
+        n = n/2;
+      }
+      return bin;
+    }
+}
+
