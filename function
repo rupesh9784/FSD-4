@@ -112,3 +112,65 @@ public class DecToBin {
     }
 }
 
+//L003
+//decimal to any base
+public static int decimalToAnyBase(int n,int b){
+      int result = 0;
+      int m = 1;
+      while(n != 0){
+        int rem = n%b;
+        result = result + rem*m;
+        m= m*10;
+        n = n/b;
+      }
+      return result;
+    }
+
+//any base to decimal
+  public static int anyBaseToDecimal(int n,int b){
+        int result = 0;
+        int m = 1;
+        while(n !=0){
+          int rem = n%10;
+          result =  result + rem * m;
+          m = m*b;
+          n = n/10;
+        }
+       return result;
+    }
+
+//add digit 1
+public int addDigits(int num) {
+        int s = 0;
+        while(num>0){
+            s = s + num%10;
+            num = num/10;
+        }
+        if(s<10) return s;
+        else {
+            s = s/10 + s%10;
+        }
+        if(s<10){
+            return s;
+        } else {
+            s = s/10 + s%10;
+            return s;
+        }
+        
+    }
+
+//add digits 2
+ public int addDigits(int num) {
+       
+       while(num>9){
+            int s = 0;
+            while(num>0){
+                s = s + num%10;
+                num = num/10;
+            }
+            num = s;    
+       } 
+        return num;
+        
+    }
+
