@@ -128,3 +128,40 @@ public static int search(int arr[], int N, int X) {
         }   
         return -1;  
  }
+
+
+//L005
+
+//sum of two array
+public static void main(String[] args) {
+        int a1[] = {2,9,5,3,7,5};
+        int a2[] = {9,3,2,5};
+        int s = 0;
+        if(a1.length > a2.length) s = a1.length+1;
+        else s = a2.length+1;
+        int[] ans = new int[s];
+        int i = a1.length-1;
+        int j = a2.length-1;
+        int k = ans.length-1;
+        int carry = 0;
+        while(i>=0 || j>=0|| carry!=0){
+              int sum = 0;
+              sum = sum + carry;
+                if(i>=0) sum = sum + a1[i];
+                if(j>=0) sum = sum + a2[j];
+                 ans[k] = sum%10;
+                carry = sum/10;
+                i--;
+                k--;
+                j--;
+        }
+        for(int p = 0; p<ans.length; p++){
+             if(p==0 && ans[p] == 0){
+                continue;
+             } else {
+                System.out.print(ans[p] + " ");
+             }
+
+        }
+
+    }
